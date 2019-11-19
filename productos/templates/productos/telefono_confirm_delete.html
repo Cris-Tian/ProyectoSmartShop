@@ -1,0 +1,60 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"> </i>Administración</a></li>
+            </ul>
+            <ul class="header-links pull-right">
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container navbar-custom">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3 ">
+                    <div class="header-logo">
+                        <a href="{% url 'index'%}"> class="logo ">
+                            {% load static %}
+                            <img class="imagen-titulo" src="{% static './img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+               
+                
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+
+&nbsp; 
+<h1><center>Eliminar Telefono</center></h1>
+&nbsp; 
+<p><br><center>¿Esta seguro de eliminar el telefono : {{ Telefono }}?<br></center></p>
+&nbsp; 
+<form action="" method="POST"><center>
+    {% csrf_token %}
+    <input type="submit" action="" value="Si, eliminar"/>
+</center></form>
+{% endblock %}

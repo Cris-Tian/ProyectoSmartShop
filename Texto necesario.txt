@@ -1,0 +1,16 @@
+Notacion de Ayuda
+
+http://127.0.0.1:8000/productos/ 			--Pagina Principal o Index
+http://127.0.0.1:8000/productos/telefonos/  		--Listado de telefonos
+http://127.0.0.1:8000/productos/telefono/create/ 	--Creacion de Telefono
+http://127.0.0.1:8000/productos/check/ 			--Administracio
+http://127.0.0.1:8000/productos/telefono/<pk>/delete    --Eliminar
+http://127.0.0.1:8000/productos/telefono/<pk>/update    --Update
+
+Admin
+
+Usuario    : equiposmart 
+Contraseña : equiposmart
+
+Usuario    : equiposmart2 
+Contraseña : equiposmart2

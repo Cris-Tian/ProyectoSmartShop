@@ -1,0 +1,73 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="{% url 'store'%}"> </i>Administración</a></li>
+            </ul>
+            <ul class="header-links pull-right">
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container navbar-custom">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3 ">
+                    <div class="header-logo">
+                        <a href="index.html" class="logo">
+                            {% load static %}
+                            <img class="imagen-titulo" src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+				<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul id="x" class="main-nav nav navbar-nav ">
+						<li id="xxx" class="active"><a href="{% url 'index'%}">Inicio</a></li>
+						<li><a href="{% url 'telefono_create'%}">Crear Telefono</a></li>
+						<li><a href="{% url 'telefonos'%}">Lista de Telefonos</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+               
+                
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+&nbsp;
+&nbsp;
+&nbsp;
+
+{% endblock %}

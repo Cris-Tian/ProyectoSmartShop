@@ -1,0 +1,61 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"> </i>Administración</a></li>
+            </ul>
+            <ul class="header-links pull-right">
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container navbar-custom">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3 ">
+                    <div class="header-logo">
+                        <a href="{% url 'check'%}" class="logo ">
+                            {% load static %}
+                            <img class="imagen-titulo" src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+               
+                
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+&nbsp;
+&nbsp;
+&nbsp;
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}

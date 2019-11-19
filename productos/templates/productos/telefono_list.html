@@ -1,0 +1,97 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"> </i>Administración</a></li>
+            </ul>
+            <ul class="header-links pull-right">
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container navbar-custom">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3 ">
+                    <div class="header-logo">
+                        <a href="{% url 'check'%}" class="logo ">
+                            {% load static %}
+                            <img class="imagen-titulo" src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+               
+                
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+&nbsp;
+&nbsp;
+    <h1><center>Lista de Telefonos</center></h1>
+    &nbsp;
+    &nbsp;
+    {% if telefono_list %}
+    <ul>
+        {% for telefono in telefono_list %}
+        <li>
+           
+        </li>
+        <center><table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th> <center> <a href="{{telefono.get_absolute_url}}">{{ telefono.nombre }}   </a></center></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bateria</td>
+                <td><center>{{telefono.bateria}} Mah</center></td>
+              </tr>
+              <tr>
+                <td>Precio</td>
+                <td><center>$ {{telefono.precio}}</center></td>
+              </tr>
+              <tr>
+                <td>RAM</td>
+                <td><center>{{telefono.ram}} GB</center></td>
+              </tr>
+              <tr>
+                <td>Procesador</td>
+                <td><center>&nbsp;&nbsp;&nbsp;{{telefono.procesador}}</center></td>
+              </tr>
+            </tbody>
+          </table></center>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+        {% endfor %}
+    </ul>
+
+    {% else %}
+        <p> No hay celulares, algo anda mal</p>
+    {% endif %}
+{% endblock %}

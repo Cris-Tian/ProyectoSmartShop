@@ -1,0 +1,95 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<header>
+    <!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"> </i>Administración</a></li>
+            </ul>
+            <ul class="header-links pull-right">
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container navbar-custom">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-md-3 ">
+                    <div class="header-logo">
+                        <a href="{% url 'check'%}" class="logo ">
+                            {% load static %}
+                            <img class="imagen-titulo" src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+               
+                
+
+                <!-- ACCOUNT -->
+                <div class="col-md-3 clearfix">
+                    <div class="header-ctn">
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
+
+<div style="margin-left:20px;margin-top:20px">
+<h4><center>¡ Ingreso exitoso !</center></h4>
+&nbsp;
+<center><table class="tabla-datos">
+    <thead>
+            <tr>
+                <th></th>
+                
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nombre&nbsp;&nbsp;&nbsp;</th>
+                    <td > {{telefono}}</td>
+                    <td>&nbsp; </td>
+                    <td>&nbsp; </td>
+                    
+                </tr>
+                    <tr>
+                    <th>Marca</th>
+                    <td>{{telefono.marca}}</td>
+                </tr>
+                    <tr>
+                    <th><span ><span>RAM</span></span></th>
+                    <td>{{telefono.ram}}</td>
+        
+                </tr>
+                <tr>
+                    <th>Procesador &nbsp;&nbsp;&nbsp;&nbsp;   </th>
+                    <td>{{telefono.procesador}}</td>
+                </tr>
+                <tr>
+                    <th>Bateria</th>
+                    <td>{{telefono.bateria}}</td>
+                </tr>
+                <tr>
+                    <th>Precio</th>
+                    <td>{{telefono.precio}}</td>
+                </tr><tr>
+                   
+            </tbody>
+</table></center>
+
+{% endblock %}

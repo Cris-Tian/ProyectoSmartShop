@@ -1,0 +1,823 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> +569 9017 0548</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> SmartShop@email.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Parque Forestal 1518</a></li>
+					</ul>
+					<ul class="header-links pull-right">
+						<li><a href="{% url 'check'%}"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+			
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container navbar-custom">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3 ">
+							<div class="header-logo">
+								<a href="{% url 'index'%}" class="logo ">
+									{% load static %}
+									<img class="imagen-titulo" src="{% static './img/logo.png' %}" alt="">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option id="cam" value="0">Todos</option>
+										<option value="1">Smartphones</option>
+										<option value="1">Accesorios</option>
+									</select>
+									<input class="input" placeholder="busca tu producto">
+									<button class="search-btn">Buscar</button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+
+								<!--newsletter-btn-->
+
+								<button class="primary-btn order-submit"><i class="fa fa-moon-o"></i> Modo Nocturno</button> 
+								  
+								<script>
+									$('button').on('click', function() { 
+										$('body').css('background', '#969696 '); 
+										$('nav').css('background', '#969696 '); 
+										$('#xxx').css('background', '#fffffff '); 
+									});  
+								</script>  
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle ">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul id="x" class="main-nav nav navbar-nav ">
+						<li id="xxx" class="active"><a href="">Inicio</a></li>
+						<li><a href="{% url 'store'%}">Todos Los Productos</a></li>
+						<li><a href="{% url 'ofertas'%}">Ofertas</a></li>
+						<li><a href="{% url 'smartphones'%}">Smartphones</a></li>
+						<li><a href="{% url 'accesorios'%}">Accesorios</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- shop -->
+					<a href="xx">
+					<div class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								{% load static %}
+								<img src="{% static './img/cOneplus.png' %}" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Smartphones<br>Colecciones</h3>
+								<a href="{% url 'smartphones'%}" class="cta-btn">Compra Ahora! <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+				    </a>
+					<!-- /shop -->
+
+					<!-- shop -->
+					<a href="store Accesorios.html">
+					<div   class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								{% load static %}
+								<img src="{% static './img/shop03.png' %}" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Accesorios<br>Coleccion</h3>
+								<a href="{% url 'accesorios'%}" class="cta-btn">Compra Ahora! <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					</a>
+					<!-- /shop -->
+
+					<!-- shop -->
+					<a href="store.html">
+					<div   class="col-md-4 col-xs-6">
+						<div  class="shop">
+							<div class="shop-img">
+								<img src="{% static './img/celularesSamsungO.jpg' %}" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Ofertas<br>Por tiempo limitado</h3>
+								<a href="{% url 'ofertas'%}" class="cta-btn">Compra Ahora! <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+				    </a>
+					<!-- /shop -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section title -->
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title">Nuevos productos</h3>
+							<div class="section-nav colorNegro">
+								<ul class="section-tab-nav tab-nav ">
+									<li class="active "><a data-toggle="tab" href="#tab1">Ofertas</a></li>
+									<li><a  data-toggle="tab" href="#tab1">Smartphones</a></li>
+									<li><a data-toggle="tab" href="#tab1">Lo nuevo</a></li>
+									<li><a data-toggle="tab" href="#tab1">Accesorios</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /section title -->
+
+					<!-- Products tab & slick -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab1" class="tab-pane active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+                        {% load static %}
+												<img src="{% static './img/audifonos2Audífonos Bluetooth WH-H800.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+													<span class="new">Nuevo!</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Accesorios</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Audífonos Bluetooth SONY WH-H800</a></h3>
+												<h4 class="product-price">$30.990 <del class="product-old-price">$40.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Audifonos Bluetooth WH-H800.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										    </form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+                        {% load static %}
+											<div class="product-img">
+                        
+												<img src="{% static './img/celularesNokiaO.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="new">Nuevo</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Nokia 7.1</a></h3>
+												<h4 class="product-price">$220.990 <del class="product-old-price">$289.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Nokia 7.1.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</form>
+											</div>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+                        {% load static %}
+												<img src="{% static './img/audifonos1.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Accesorios</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Audifonos H-140 Sony</a></h3>
+												<h4 class="product-price">$80.990 <del class="product-old-price">$110.990</del></h4>
+												<div class="product-rating">
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Audifonos H-140 Sony.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+											</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+                        {% load static %}
+												<img src="{% static './img/celularesHuawei.jpg' %}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Huawei P30 lite</a></h3>
+												<h4 class="product-price">$250.990 <del class="product-old-price">$290.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Huawei P30 Lite.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+											</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+												<div class="product-img">
+                          {% load static %}
+													<img src="{% static './img/productoSamsung1.png' %}" alt="">
+												</div>
+												<div class="product-body">
+													<p class="product-category">Smartphone</p>
+													<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Samsung Galaxy A50</a></h3>
+													<h4 class="product-price">$210.990 <del class="product-old-price">$210.990</del></h4>
+													<div class="product-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+													<div class="product-btns">
+														<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+														<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+														<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+													</div>
+												</div>
+												<form action="checkout Samsung.html">
+												<div class="add-to-cart">
+													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+												</div>
+												</form>
+											</div>
+											<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+                        {% load static %}
+												<img src="{% static './img/celularesRedmis2.jpg' %}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Xiaomi Redmi S2</a></h3>
+												<h4 class="product-price">$210.990 <del class="product-old-price">$230.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Lista de deseados</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Xiaomi Redimi S2.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+											</form>
+										</div>
+										<!-- /product -->
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+								<!-- /tab -->
+							</div>
+						</div>
+					</div>
+					<!-- Products tab & slick -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- HOT DEAL SECTION -->
+		<div id="hot-deal" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="hot-deal">
+							<ul class="hot-deal-countdown">
+								<li>
+									<div>
+										<h3>03</h3>
+										<span>Dias</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>10</h3>
+										<span>Horas</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>34</h3>
+										<span>Mins</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>60</h3>
+										<span>Secs</span>
+									</div>
+								</li>
+							</ul>
+							<h2 class="text-uppercase">Aprovecha las ofertas</h2>
+							<p>Hasta un 70% de descuento!</p>
+							<a class="primary-btn cta-btn" href="store ofertas.html">Compra ahora</a>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /HOT DEAL SECTION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section title -->
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title">Mas vendidos</h3>
+							<div class="section-nav">
+								<ul class="section-tab-nav tab-nav">
+									<li class="active"><a data-toggle="tab" href="#tab2">Smartphones</a></li>
+									<li><a data-toggle="tab" href="#tab2">Cameras</a></li>
+									<li><a data-toggle="tab" href="#tab2">Accesorios</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /section title -->
+
+					<!-- Products tab & slick -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab1" class="tab-pane active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+												<img src="{% static './img/audifonos2Audífonos Bluetooth WH-H800.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+													<span class="new">Nuevo!</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Accesorios</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Audífonos Bluetooth WH-H800</a></h3>
+												<h4 class="product-price">$30.990 <del class="product-old-price">$40.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Audifonos Bluetooth WH-H800.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+												<img src="{% static '/img/celularesNokiaO.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="new">Nuevo</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Nokia 7.1</a></h3>
+												<h4 class="product-price">$259.990 <del class="product-old-price">$289.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Nokia 7.1.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+												<img src="{% static './img/audifonos1.jpg' %}" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Accesorios</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Audifonos H-140 Sony</a></h3>
+												<h4 class="product-price">$89.990 <del class="product-old-price">$129.990</del></h4>
+												<div class="product-rating">
+												</div>
+												<div class="product-btns">
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Audifonos H-140 Sony.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+												<img src="{% static './img/celularesHuawei.jpg' %}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Huawei P30 lite</a></h3>
+												<h4 class="product-price">$269.990 <del class="product-old-price">$289.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Huawei P30 Lite.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										</form>
+										</div>
+										<!-- /product -->
+
+										<!-- product -->
+										<div class="product">
+											<div class="product-img">
+												<img src="{% static './img/celularesRedmis2.jpg' %}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Smartphone</p>
+												<h3 class="product-name"><a href="{% url 'caracteristicas'%}">Xiaomi Redmi S2</a></h3>
+												<h4 class="product-price">$210.990 <del class="product-old-price">$230.990</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Vista rapida</span></button>
+												</div>
+											</div>
+											<form action="checkout Xiaomi Redimi S2.html">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+											</div>
+										</form>
+										</div>
+										<!-- /product -->
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+								<!-- /tab -->
+							</div>
+						</div>
+					</div>
+					<!-- /Products tab & slick -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">		
+					<div class="clearfix visible-sm visible-xs"></div>					
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- NEWSLETTER -->
+		<div id="newsletter" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="newsletter">
+							<p>Suscríbete a nuestro<strong> Boletín</strong></p>
+							
+							<form action="index.html" name="suscribirse" method="GET">
+								<input class="input" type="email" name="sus" id="sus"  placeholder="Ingresa tu Email" required>
+								<button class="newsletter-btn" name="btn2" id="btn2"><i class="fa fa-envelope"></i> Subscribirse</button>	
+							</form>
+							
+							<script>
+								(function(){	
+
+									var suscribirse=document.getElementsByName('suscribirse')[0],
+											elementos = suscribirse.elements,
+											boton = document.getElementById('btn2');
+
+									var validarEmail = function(e)
+									{
+										if(suscribirse.sus.value == 0)
+										{
+										}
+										else
+										{
+											alert("Suscripción Realizada");
+										}
+									};
+
+									var valida = function(e)
+									{
+										validarEmail(e);
+									};
+
+									suscribirse.addEventListener("submit",valida);
+
+								}())
+						</script>
+
+							<ul class="newsletter-follow">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-pinterest"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Sobre Nosotros</h3>
+								<p>Empresa dedicada a la venta de telefono inteligentes a lo largo de toda latinoamerica</p>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+569 90170548</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>Smartshop@email.com</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Categorias</h3>
+								<ul class="footer-links">
+									<li><a href="store.html">Ofertas</a></li>
+									<li><a href="store Smartphones.html">Smartphones</a></li>
+									<li><a href="store Accesorios.html">Accesorios</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Información</h3>
+								<ul class="footer-links">
+									<li><a href="nosotros.html">Sobre Nosotros</a></li>
+									<li><a href="contacto.html">Contactanos</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Servicios</h3>
+								<ul class="footer-links">
+									<li><a href="micuenta.html">Mi cuenta</a></li>
+									<li><a href="ayuda.html">Ayuda</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+							</ul>
+							<span class="copyright">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+    </footer>
+    
+    <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+{% endblock %}

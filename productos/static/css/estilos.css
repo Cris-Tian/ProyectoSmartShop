@@ -1,0 +1,125 @@
+.navbar-custom
+{
+    background-color:#FF6C00;
+    color:#E76600;
+}
+
+
+.fondo-suave
+{
+    background-color:#E3DAD4; 
+     
+}
+
+.colorNegro
+{
+color:#FF6C00;
+
+}
+
+.fondo
+{
+background-color:#FFF9F4;
+}
+
+.fondo-celulares
+{
+background-color:#BDBFC4;
+}
+
+.color
+{
+   background: #E76600;
+}
+
+.fondo-oscuro
+{
+    background: #FF7400;
+    color:white;
+}
+
+.color-texto-claro
+{
+    color:#E76600;
+}
+
+.color-footer
+{
+    background-color:#816B59; 
+}
+
+.fuente
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 27px;
+}
+
+.fuente-bajada
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.fuente-bajada-dos
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    text-align: center;
+}
+
+.justificado
+{
+    text-align: center;
+}
+
+.fuente-bajada-alta
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 29px;
+    text-align: center;
+}
+
+.fuente-texto
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color:white ;
+}
+
+.descripcion
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color:black;
+}
+
+.fuente-card
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color:black ;
+}
+
+.imagen-titulo
+{
+    width:95%; 
+    text-align:center; 
+    padding:20px; 
+}
+
+.imagen-banner
+{
+    width:98%; 
+    text-align:center; 
+    padding:20px; 
+}
+
+.logos
+{
+    text-align: center;
+}
+
+.agrandar-imagen
+{
+    width: 80%;
+}
